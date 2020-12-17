@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"flag"
 	"fmt"
 	"strconv"
@@ -8,6 +9,7 @@ import (
 	"time"
 
 	"github.com/go-redis/redis"
+	"github.com/mitchellh/mapstructure"
 )
 
 var redisAddr = flag.String("addr", "10.252.146.111:6379", "redis addr")
@@ -32,8 +34,14 @@ func redisOptions() *redis.Options {
 	}
 }
 
-type VMUpdate struct {
-	op int `json:op`
+type SubRequest struct {
+	Header string `json:"header"`
+	Mapp   map[string]interface{}
+}
+
+type VM struct {
+	Name string `json:"name"`
+	Age  int    `json:"age"`
 }
 
 func main() {
@@ -56,6 +64,12 @@ func main() {
 	pubsub := client.Subscribe("mychannel")
 	defer pubsub.Close()
 
+	err := pubsub.Ping()
+	if err != nil {
+		fmt.Println("Failed to ping")
+	} else {
+		fmt.Println("Success to ping")
+	}
 	fmt.Println("subscribe mychannel")
 	for {
 		//fmt.Println("start to selete")
@@ -68,6 +82,8 @@ func main() {
 			fmt.Printf("time:%d ms, channel:%s, pattern:%s, payload:%s\n", (nt-ot)/1000/1000, msg.Channel, msg.Pattern, msg.Payload)
 			//fmt.Println(ot)
 			//fmt.Println(nt)
+			dealMsg(msg.Payload)
+
 			if msg.Payload == "close" {
 				return
 			}
@@ -86,4 +102,36 @@ func main() {
 	//}
 
 	//fmt.Println("vim-go")
+}
+
+func dealMsg(msg string) {
+	m := make(map[string]interface{})
+	err := json.Unmarshal([]byte(msg), &m)
+	if err == nil {
+		fmt.Println(m)
+		//switch t := sq.mapp(type) {
+		//case map[string]interface{}:
+		//	for k, v := range t {
+		//		switch k {
+		//		case "vm":
+		//			vm := v.(VM)
+		//			fmt.Println(vm.name, vm.age)
+		//		}
+		//	}
+		//}
+		for k, v := range m {
+			switch k {
+			case "header":
+				fmt.Println(v)
+			case "vm":
+				var vm = VM{}
+				if err := mapstructure.Decode(v, &vm); err != nil {
+					return
+				}
+				fmt.Println(vm)
+			}
+		}
+	} else {
+		fmt.Println(err)
+	}
 }
