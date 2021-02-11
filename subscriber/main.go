@@ -34,6 +34,29 @@ func redisOptions() *redis.Options {
 	}
 }
 
+func redisFailoverOptions(redisAddr, passwd string) *redis.FailoverOptions {
+	return &redis.FailoverOptions{
+		MasterName:         "mymaster",
+		SentinelAddrs:      []string{redisAddr},
+		OnConnect:          nil,
+		Password:           passwd,
+		DB:                 0,
+		MaxRetries:         0,
+		MinRetryBackoff:    0,
+		MaxRetryBackoff:    0,
+		DialTimeout:        10 * time.Second,
+		ReadTimeout:        30 * time.Second,
+		WriteTimeout:       30 * time.Second,
+		PoolSize:           10,
+		MinIdleConns:       0,
+		MaxConnAge:         0,
+		PoolTimeout:        30 * time.Second,
+		IdleTimeout:        time.Minute,
+		IdleCheckFrequency: 100 * time.Millisecond,
+		TLSConfig:          nil,
+	}
+}
+
 type SubRequest struct {
 	Header string `json:"header"`
 	Mapp   map[string]interface{}
@@ -48,7 +71,8 @@ func main() {
 	flag.Parse()
 	var client *redis.Client
 	fmt.Printf("addr:%s , passwd:%s\n", *redisAddr, *passwd)
-	opt := redisOptions()
+	//opt := redisOptions()
+	opt := redisFailoverOptions(*redisAddr, *passwd)
 	opt.MinIdleConns = 0
 	opt.MaxConnAge = 0
 	//opt.OnConnect = func(cn *redis.Conn) (err error) {
@@ -56,7 +80,8 @@ func main() {
 	//	fmt.Println("clientID:", clientID, err)
 	//	return err
 	//}
-	client = redis.NewClient(opt)
+	//client = redis.NewClient(opt)
+	client = redis.NewFailoverClient(opt)
 	defer client.Close()
 	fmt.Println("new client")
 
