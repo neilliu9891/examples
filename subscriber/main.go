@@ -40,7 +40,7 @@ func redisFailoverOptions(redisAddr, passwd string) *redis.FailoverOptions {
 		SentinelAddrs:      []string{redisAddr},
 		OnConnect:          nil,
 		Password:           passwd,
-		DB:                 0,
+		DB:                 1,
 		MaxRetries:         0,
 		MinRetryBackoff:    0,
 		MaxRetryBackoff:    0,

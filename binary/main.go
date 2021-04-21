@@ -23,7 +23,12 @@ type RecvType2Msg struct {
 	RemoteBgpAs uint32
 }
 
+const GetGuestPing = "{\"execute\":\"guest-ping\"}"
+
 func main() {
 	fmt.Printf("%d", binary.Size(RecvType2Msg{}))
 	fmt.Println("vim-go")
+	instanceId := "12333"
+	getQgaStatusCmd := fmt.Sprintf("virsh qemu-agent-command %s '%s'", instanceId, GetGuestPing)
+	fmt.Println(getQgaStatusCmd)
 }
