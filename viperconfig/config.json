@@ -1,0 +1,33 @@
+{
+  "az_id": "2",
+  "buildtime": "2021-04-01T06:49:44AM",
+  "forcesync": false,
+  "githash": "c168d7acb0253688e1e7332955ee28056b665654",
+  "logdirname": "/var/log/network-cvk-agent/",
+  "monitor": {
+    "files": [
+      "/run/ovn/ovn-controller.pid",
+      "/run/openvswitch/ovs-vswitchd.pid"
+    ]
+  },
+  "networklog": "/var/log/network-cvk-agent/network-cvk-agent.log",
+  "ovncontrollerurl": "",
+  "ovnnbdb": "/run/ovn/ovnnb_db.sock",
+  "ovnsbdb": "/run/ovn/ovnsb_db.sock",
+  "port": ":22222",
+  "route": {
+    "cidr": "xxx",
+    "gateway_ip": "111s:xxx"
+  },
+  "subscriberconfig": {
+    "address": "10.254.7.229:6679",
+    "channel": "",
+    "mode": "xxxxxx",
+    "password": "unic-moove"
+  },
+  "version": "v1.0.0",
+  "warn": {
+    "server_addr": "aaa",
+    "server_uri": "/uca/network/v2.0/agent/monitor/event"
+  }
+}
