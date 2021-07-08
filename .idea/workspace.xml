@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a12ebb3-ae6f-4a90-81c9-65e5892a73ef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/publisher/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/optionmod/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
@@ -23,22 +31,39 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/publisher" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\01Neil\github89\examples" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build main.go (1)">
+    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="redis-examples" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/optionmod/main.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="redis-examples" />
+      <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/publisher/main.go" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build main.go (1)" />
         <item itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
@@ -58,14 +83,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <proxy>https://goproxy.io</proxy>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="2599" y="168" key="#go_build_main.go" timestamp="1608253309453">
-      <screen x="1920" y="0" width="1920" height="1050" />
+    <state x="-1285" y="519" key="SettingsEditor" timestamp="1625641828833">
+      <screen x="-1440" y="-361" width="1440" height="2530" />
     </state>
-    <state x="2599" y="168" key="#go_build_main.go/1920.0.1920.1050/0.0.1920.1050@1920.0.1920.1050" timestamp="1608253309453" />
-    <state x="2660" y="280" key="FileChooserDialogImpl" timestamp="1608253318983">
-      <screen x="1920" y="0" width="1920" height="1050" />
+    <state x="-1285" y="519" key="SettingsEditor/1920.1.1920.1050/0.0.1920.1050/-1440.-361.1440.2530@-1440.-361.1440.2530" timestamp="1625641828833" />
+    <state x="-1057" y="236" width="672" height="678" key="search.everywhere.popup" timestamp="1625747308255">
+      <screen x="-1440" y="-361" width="1440" height="2530" />
     </state>
-    <state x="2660" y="280" key="FileChooserDialogImpl/1920.0.1920.1050/0.0.1920.1050@1920.0.1920.1050" timestamp="1608253318983" />
+    <state x="-1057" y="236" width="672" height="678" key="search.everywhere.popup/1920.1.1920.1050/0.0.1920.1050/-1440.-361.1440.2530@-1440.-361.1440.2530" timestamp="1625747308255" />
   </component>
 </project>
