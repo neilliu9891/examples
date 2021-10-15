@@ -31,4 +31,5 @@ func main() {
 	instanceId := "12333"
 	getQgaStatusCmd := fmt.Sprintf("virsh qemu-agent-command %s '%s'", instanceId, GetGuestPing)
 	fmt.Println(getQgaStatusCmd)
+	fmt.Println([]byte("vim-go"))
 }

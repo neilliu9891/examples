@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a12ebb3-ae6f-4a90-81c9-65e5892a73ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/optionmod/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +36,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../github/redis" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
@@ -88,6 +87,26 @@
     <proxy>https://goproxy.io</proxy>
   </component>
   <component name="WindowStateProjectService">
+    <state x="-940" y="659" key="FileChooserDialogImpl" timestamp="1625750689082">
+      <screen x="-1440" y="-361" width="1440" height="2530" />
+    </state>
+    <state x="-940" y="659" key="FileChooserDialogImpl/1920.1.1920.1050/0.0.1920.1050/-1440.-361.1440.2530@-1440.-361.1440.2530" timestamp="1625750689082" />
+    <state width="1397" height="773" key="GridCell.Tab.0.bottom" timestamp="1625750690339">
+      <screen x="-1440" y="-361" width="1440" height="2530" />
+    </state>
+    <state width="1397" height="773" key="GridCell.Tab.0.bottom/1920.1.1920.1050/0.0.1920.1050/-1440.-361.1440.2530@-1440.-361.1440.2530" timestamp="1625750690339" />
+    <state width="1397" height="773" key="GridCell.Tab.0.center" timestamp="1625750690338">
+      <screen x="-1440" y="-361" width="1440" height="2530" />
+    </state>
+    <state width="1397" height="773" key="GridCell.Tab.0.center/1920.1.1920.1050/0.0.1920.1050/-1440.-361.1440.2530@-1440.-361.1440.2530" timestamp="1625750690338" />
+    <state width="1397" height="773" key="GridCell.Tab.0.left" timestamp="1625750690338">
+      <screen x="-1440" y="-361" width="1440" height="2530" />
+    </state>
+    <state width="1397" height="773" key="GridCell.Tab.0.left/1920.1.1920.1050/0.0.1920.1050/-1440.-361.1440.2530@-1440.-361.1440.2530" timestamp="1625750690338" />
+    <state width="1397" height="773" key="GridCell.Tab.0.right" timestamp="1625750690338">
+      <screen x="-1440" y="-361" width="1440" height="2530" />
+    </state>
+    <state width="1397" height="773" key="GridCell.Tab.0.right/1920.1.1920.1050/0.0.1920.1050/-1440.-361.1440.2530@-1440.-361.1440.2530" timestamp="1625750690338" />
     <state x="-1285" y="519" key="SettingsEditor" timestamp="1625641828833">
       <screen x="-1440" y="-361" width="1440" height="2530" />
     </state>
